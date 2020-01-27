@@ -1,33 +1,16 @@
-class Bank {
-    private int account_number;
-    String name;
-    String address;
-    //int age;
-    int phone_number;
-    String email;
-    // int family_number;
-    String job;
-    int income;
-    private int account_balance;
-
-    public void showData(){
-        System.out.println("Account Number + account_number");
-        System.out.println("Account Balance + account_balance");
-    }
-
-    public void deposit(int a) {
-        if(a < 0){
-            System.out.println("Error!");
-        } else {
-            account_balance = account_balance + a;
+class A {
+        public static void main(String args[]) {
+         byte x;
+         int a = 270;
+         double b = 128.128;
+         System.out.println("int converted to byte");
+         x = (byte) a;
+         System.out.println("a and x " + a + " " + x);
+         System.out.println("double converted to int");
+         a = (int) b;
+         System.out.println("b and a " + b + " " + a);
+         System.out.println("\ndouble converted to byte");
+         x = (byte)b;
+         System.out.println("b and x " + b + " " + x);
         }
-    }
-
-    public int getBalance(){
-        return this.account_balance;
-    }
-
-    public void setNumber(int num){
-        this.account_number = num;
-    }
-}
+       }
