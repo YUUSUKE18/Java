@@ -1,37 +1,20 @@
-class Demo{
-    int  value1;
-    int  value2;
-     Demo(){
-       value1 = 1;
-       value2 = 2;
-       System.out.println("Inside 1st Parent Constructor");
-    }
-    Demo(int a){
-       value1 = a;
-       System.out.println("Inside 2nd Parent Constructor");
-    }
-   public void display(){
-      System.out.println("Value1 === "+value1);
-      System.out.println("Value2 === "+value2);
+class JavaException{
+    public static void main(String args[]){
+   try{
+        throw new MyException(2);
+        // throw is used to create a new exception and throw it.
    }
-   public static void main(String args[]){
-      DemoChild d1 = new DemoChild();
-      d1.display();
-   }
+  catch(MyException e){
+     System.out.println(e) ;
+  }
  }
- class DemoChild extends Demo{
-     int value3;
-     int value4;
-     DemoChild(){
-     super(5);
-      value3 = 3;
-      value4 = 4;
-     System.out.println("Inside the Constructor of Child");
-     }
-     public void display(){
-       System.out.println("Value1 === "+value1);
-       System.out.println("Value2 === "+value2);
-       System.out.println("Value1 === "+value3);
-       System.out.println("Value2 === "+value4);
+ }
+ class MyException extends Exception{
+    int a;
+    MyException(int b) {
+      a=b;
     }
+    public String toString(){
+      return ("Exception Number =  "+a) ;
+   }
  }
