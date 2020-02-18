@@ -3,9 +3,32 @@ import java.util.Random;
 public class Cleric {
     String name;
     int hp = 50;
-    final int max_hp = 50;
+    // final int max_hp = 50;
     int mp = 10;
-    final int max_mp = 10;
+    // final int max_mp = 10;
+    static final int max_hp = 50;
+    static final int max_mp = 10;
+
+    void Cleric(String name , int hp, int mp){
+        this.name = name;
+        this.hp = hp;
+        this.mp = mp;
+    }
+
+    void Cleric(String name , int hp){
+        this(name, hp, Cleric.max_mp);
+    }
+
+    void Cleric(String name){
+        this(name, Cleric.max_hp);
+    }
+
+    void Cleric(){
+        this();
+    }
+
+
+
 
     void selfAid() {
         System.out.println(this.name + "はセルフエイドを唱えた");
