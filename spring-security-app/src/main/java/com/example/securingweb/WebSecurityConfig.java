@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
@@ -24,8 +25,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     @Override
     public UserDetailsService userDetailsService(){
-        UserDetails user = User.withDefaultPasswordEncoder().username("user").password("password").roles("USER").build();
+        UserDetails user = User.username("user").password("password").roles("USER").build();
 
-        return new InMemoryUserDetailsManager(user);
+        return JdbcUserDetailsManager(user);
     }
 }
