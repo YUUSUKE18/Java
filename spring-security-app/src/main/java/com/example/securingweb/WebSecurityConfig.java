@@ -28,5 +28,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         UserDetails user = User.username("user").password("password").roles("USER").build();
 
         return JdbcUserDetailsManager(user);
-    }
+    }//
 }
