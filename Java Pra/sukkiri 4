@@ -1,8 +1,0 @@
-class Sukkiri {
-    public static void main(String args[]){
-        int [4] points;
-        double [5] weights;
-        boolean [3] answers;
-        String [3] names;
-    }
-}
